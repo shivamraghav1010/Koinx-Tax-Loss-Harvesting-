@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CurrencyValue = ({ value, currency, isGain = false, isLossRow = false }) => {
+const CurrencyValue = ({ value, currency = 'USD', isGain = false, isLossRow = false }) => {
   const rate = currency === 'USD' ? 1 / 85 : 1;
   const converted = value * rate;
   const symbol = currency === 'USD' ? '$' : '₹';
